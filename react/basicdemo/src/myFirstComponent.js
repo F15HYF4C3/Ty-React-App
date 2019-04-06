@@ -4,7 +4,7 @@ class MyFirstComponent extends Component {
   render() {
     return (
         <div>
-            1
+           <h2>1</h2>
         </div>
     );
   }
