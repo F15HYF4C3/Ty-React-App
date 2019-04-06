@@ -1,0 +1,44 @@
+/* Component Based Architecture
+- "Piece of Code, a cog in a machine, small resuable parts"
+- Index.js: Part 1 (Connects to the HTML file)
+- app.js: Part 2 (PARENT: Everything else is the child and is written in js, this is the entire app\screen you are designing = website)
+- Instagram is a part + part + part + part (components) example
+- header.js (child), feed.js (child), story_box.js (child), suggested_box.js (child), profile_box.js (child), feed_list.js (child), menu_options.js (child) ->(components of instagram)
+- ex: feed.js >(child of)> feed_list.js >(child of)> app.js (The are all bite-size and reusable)
+- ReadMe is standard - Basic instructions on how to use the create-react-app
+- There are dependencies which are peices or reusable code to pull down and reuse (NPM = Node Package Manager)
+Never go to Node_Modules and update them - not in this cohort
+gitignore - will not get pushed up to github
+PUBLIC: fabicon = image that shows in a tab
+index.html = super Basic, one div with ID of Root (NEVER TOUCH THIS PAGE OMG DONT DO IT)
+manifest.json - standard, ignore it please
+DO NOT TOUCH ANY PUBLIC FILES
+SRC= index.js\app.js - only two you will work with?
+Delete app.test
+
+INDEX.JS:
+Ooooo, delete extra text and line 5
+'import statement' allows you to use other code from outer sources, sets up a variable that can be used to access the code in this file. (always use import REACT from 'react'" in all js files)
+Other import statements are optional : 
+
+"import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+
+
+ReactDOM.render(<App></App>, document.getElementById('root'));"
+
+^^ will upload your specified code into your "Root" and render it in your HTML file
+
+App.js is an example of how you set up a component of the total Package:
+REPEAT THE PATTERN FOREVER AND EVER 
+
+"Class" is a prototype or a model of an object - 
+calss APP extends Component {takes the class of "App" and acts on all componenets using the function (method)}
+
+JSX handles similarly to HTML, but under the hood it is JavaScript (Its a mutt!)
+
+Differences:
+ClassName (JSX) = Class (HTML)
+
