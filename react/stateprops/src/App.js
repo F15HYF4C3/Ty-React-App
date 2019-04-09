@@ -22,13 +22,30 @@ class App extends Component {
     }) 
   }
 
-handleClick(color){
-  console.log(color);
-}
+  handleClick(color){
+    if(color === this.state.turns[this.state.userTurn]){
+      if(this.state.turns.length -1 === this.state.userTurn){
+        this.setState({
+          turns:[...this.state.turns, generateColor(this.state.colors)],
+          userTurn: 0
+        })
+      }else{
+        this.setState({
+          userTurn: this.state.userTurn + 1
+        })
+      }
+    }else{
+      alert("You done mess up AAron!!!")
+      this.setState({
+        turns:[],
+        userTurn:0
+      })
+    }
+  }
 
   render() {
     const buttons = this.state.colors.map((e)=>{
-      return  <Button color={e}/>
+      return  <Button key={e} click={this.handleClick} color={e}/>
     })
 
     return (
